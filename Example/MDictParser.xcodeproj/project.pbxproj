@@ -13,8 +13,11 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* MDictDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* MDictDataTest.swift */; };
 		827C78D49BFE5BD0E26E8F20 /* Pods_MDictParser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869339F404A748BAB312C2A8 /* Pods_MDictParser_Tests.framework */; };
+		F0A51DE72313E29C00150694 /* oalecd8e.mdx in Resources */ = {isa = PBXBuildFile; fileRef = F0A51DE62313E29C00150694 /* oalecd8e.mdx */; };
+		F0A51DE82313E29C00150694 /* oalecd8e.mdx in Resources */ = {isa = PBXBuildFile; fileRef = F0A51DE62313E29C00150694 /* oalecd8e.mdx */; };
+		F0A9451323145D63006C2F40 /* MDictParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9451223145D63006C2F40 /* MDictParserTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1FEC5A26093F8A0F2A3951F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1FEC5A26093F8A0F2A3951F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3E8FCA8EE697A63E3368E98D /* Pods-MDictParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Tests/Pods-MDictParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADEDCF1A7264607C68EB83B /* Pods-MDictParser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Example.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Example/Pods-MDictParser_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4B3C7533D2185459E8C8DB1C /* MDictParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MDictParser.podspec; path = ../MDictParser.podspec; sourceTree = "<group>"; };
+		4B3C7533D2185459E8C8DB1C /* MDictParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MDictParser.podspec; path = ../MDictParser.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MDictParser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDictParser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +44,14 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MDictParser_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDictParser_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* MDictDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDictDataTest.swift; sourceTree = "<group>"; };
 		74A3450AC93A14D179B34104 /* Pods-MDictParser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Example.release.xcconfig"; path = "Target Support Files/Pods-MDictParser_Example/Pods-MDictParser_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7F5371991136D79D392A067A /* Pods-MDictParser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Tests.release.xcconfig"; path = "Target Support Files/Pods-MDictParser_Tests/Pods-MDictParser_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		869339F404A748BAB312C2A8 /* Pods_MDictParser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDictParser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEB5D3B2239C0189D6D8E3D /* Pods_MDictParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDictParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA54C387EFCF1263C37A5B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		ECA54C387EFCF1263C37A5B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F0A51DE62313E29C00150694 /* oalecd8e.mdx */ = {isa = PBXFileReference; lastKnownFileType = file; path = oalecd8e.mdx; sourceTree = "<group>"; };
+		F0A9451223145D63006C2F40 /* MDictParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDictParserTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 		607FACD21AFB9204008FA782 /* Example for MDictParser */ = {
 			isa = PBXGroup;
 			children = (
+				F0A51DE62313E29C00150694 /* oalecd8e.mdx */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -124,8 +130,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* MDictDataTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				F0A9451223145D63006C2F40 /* MDictParserTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -156,7 +163,6 @@
 				3E8FCA8EE697A63E3368E98D /* Pods-MDictParser_Tests.debug.xcconfig */,
 				7F5371991136D79D392A067A /* Pods-MDictParser_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +178,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				636AB2D2296FF10E676FDDCB /* [CP] Embed Pods Frameworks */,
+				2555D4FCC48F8EB98333DFE2 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -228,6 +235,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -247,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A51DE72313E29C00150694 /* oalecd8e.mdx in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -257,12 +266,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A51DE82313E29C00150694 /* oalecd8e.mdx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2555D4FCC48F8EB98333DFE2 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		636AB2D2296FF10E676FDDCB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,10 +298,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MDictParser_Example/Pods-MDictParser_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTUtils/JTUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/JT_CryptoSwift/JT_CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MDictParser/MDictParser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JT_CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDictParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				F0A9451323145D63006C2F40 /* MDictParserTest.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* MDictDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

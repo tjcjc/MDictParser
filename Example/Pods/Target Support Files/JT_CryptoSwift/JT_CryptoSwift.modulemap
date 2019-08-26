@@ -1,0 +1,6 @@
+framework module JT_CryptoSwift {
+  umbrella header "JT_CryptoSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

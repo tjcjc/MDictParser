@@ -1,0 +1,23 @@
+disabled_rules:
+  - line_length
+  - type_name
+  - large_tuple
+  - multiple_closures_with_trailing_closure
+  - identifier_name
+  - type_body_length
+  - force_try
+  - force_cast
+
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+
+included:
+  - ../MDictParser
+
+excluded:
+  - ../MDictParser/Classes/Regex
+  - ../MDictParser/Classes/DataCompression
+
+function_body_length:
+  warning: 50

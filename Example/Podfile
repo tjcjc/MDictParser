@@ -1,3 +1,5 @@
+source 'https://github.com/tjcjc/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'MDictParser_Example' do

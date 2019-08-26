@@ -1,0 +1,30 @@
+{
+  "name": "MDictParser",
+  "version": "0.1.0",
+  "summary": "Parse MDict with swift.",
+  "description": "Parse MDict file with swift.",
+  "homepage": "https://github.com/tjcjc/MDictParser",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tjcjc": "taijcjc@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tjcjc/MDictParser.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MDictParser/Classes/**/*",
+  "dependencies": {
+    "JT_CryptoSwift": [
+      "~> 1.0.1"
+    ],
+    "JTUtils": [
+      "~> 0.1.0"
+    ]
+  }
+}
