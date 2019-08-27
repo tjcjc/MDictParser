@@ -62,6 +62,7 @@ struct MDictData {
             let value: String! = m.group(named: "value")
             r[key.lowercased()] = value.lowercased()
         }
+        print(r)
         return r
     }
 
@@ -158,17 +159,21 @@ struct MDictData {
         return String(data: self.readSubRawData(length: length), encoding: .utf8) ?? ""
     }
 
-    mutating func fetchIndexAndWords() -> [(UInt64, String)] {
+    mutating func fetchIndexAndWords() -> [(Int, String)] {
         var i = self.index
-        var r: [(UInt64, String)] = []
+        var r: [(Int, String)] = []
         let count = data.count
         while i < count {
             let keyId = self.readInt()
             let str = self.readWord()
             i = self.index
-            r.append((UInt64(keyId), str))
+            r.append((keyId, str))
         }
         return r
+    }
+    
+    func tailData() -> Data {
+        return self.data.subData(self.index, length: self.data.count - self.index)
     }
 
     func mdxDecrypt(data: Data) -> Data {

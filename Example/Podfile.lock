@@ -4,6 +4,8 @@ PODS:
   - MDictParser (0.1.0):
     - JT_CryptoSwift (~> 1.0.1)
     - JTUtils (~> 0.1.0)
+    - MMKV (~> 1.0.22)
+  - MMKV (1.0.22)
   - Nimble (7.3.4)
   - Quick (1.2.0)
 
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - MMKV
     - Nimble
     - Quick
   https://github.com/tjcjc/Specs.git:
@@ -27,7 +30,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   JT_CryptoSwift: 44fb2a2a35cfd850af9b97e2545eee334a261761
   JTUtils: f6af14a1590cbfbc4534cb4539dc649ac5a5b0e1
-  MDictParser: d5fffae9ef818dfc6931f100f1991a2c42417372
+  MDictParser: eab1de9c31c6ff3f33e1a75ad0fd66472263061d
+  MMKV: 99b05c376c0eb412b468ba1d3e6813502edeaa24
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 

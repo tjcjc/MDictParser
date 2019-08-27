@@ -10,8 +10,9 @@
 #endif
 #endif
 
+#import "MMKV.h"
+#import "MMKVHandler.h"
 
-FOUNDATION_EXPORT double MDictParserVersionNumber;
-FOUNDATION_EXPORT const unsigned char MDictParserVersionString[];
+FOUNDATION_EXPORT double MMKVVersionNumber;
+FOUNDATION_EXPORT const unsigned char MMKVVersionString[];
 
-#import <MMKV/MMKV.h>

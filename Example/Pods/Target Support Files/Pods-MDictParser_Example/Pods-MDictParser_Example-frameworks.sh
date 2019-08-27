@@ -164,11 +164,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JTUtils/JTUtils.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JT_CryptoSwift/JT_CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDictParser/MDictParser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JTUtils/JTUtils.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JT_CryptoSwift/JT_CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDictParser/MDictParser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

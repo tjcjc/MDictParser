@@ -14,19 +14,29 @@ public final class MDictParser {
     var version: MDictVersion = .v1
     var encryptType: MDictEncryptType = .none
     var encoding: MDictEncoding = .utf8
-    var wordsAndIndex: [(UInt64, String)] = []
+    var wordsAndIndex: [(Int, String)] = []
+    var numWords = 0
+    var fileName: String = ""
 
     public init?(fileName: String) {
         guard let path = Bundle.main.path(forResource: fileName, ofType: "mdx") else {
             return nil
         }
 
+        self.fileName = fileName
         let rawData = try! Data(contentsOf: URL(fileURLWithPath: path))
         self.dictData = MDictData(rawData: rawData)
+    }
+    
+    public func getSearchData() -> MDictSearchData {
         self.version = self.dictData.version
         self.encoding = self.dictData.encoding
         self.parseKeys()
-        self.parseDetail()
+        let detailBlockSize = self.getDetailBlockSizeArray()
+        return MDictSearchData(startIndex: self.dictData.index,
+                                          fileName: fileName,
+                                          blockSize: detailBlockSize,
+                                          indexAndWords: self.wordsAndIndex)
     }
 
     /// get keys meta data size
@@ -48,14 +58,11 @@ public final class MDictParser {
         let keyBlockSizeArray = self.getKeysBlockSizeArray(length: dataSize[2], numEntries: dataSize[1])
         assert(dataSize[0] == keyBlockSizeArray.count)
         wordsAndIndex = self.getIndexAndWords(length: dataSize[3], blockSize: keyBlockSizeArray)
+        self.numWords = wordsAndIndex.count
     }
-    
-    func parseDetail() {
-        let detailBlockSize = self.getDetailBlockSizeArray()
-        let detail = self.parseDetailBlock(blockSize: detailBlockSize, wordsAndIndex: wordsAndIndex)
-    }
-    
-    func parseDetailBlock(blockSize: [(Int, Int)], wordsAndIndex: [(UInt64, String)]) -> [(String, String)] {
+
+
+    func parseDetailBlock(blockSize: [(Int, Int)], wordsAndIndex: [(Int, String)]) -> [(String, String)] {
         var i = 0
         var offset = 0
         var dict: [(String, String)] = []
@@ -71,12 +78,12 @@ public final class MDictParser {
                 let startIndex = Int(wordsAndIndex[i].0)
                 let keyText = wordsAndIndex[i].1
                 // 如果当前要查的条目已经超过了块的index
-                if (startIndex - offset >= decompress) {
+                if startIndex - offset >= decompress {
                     break
                 }
                 var endIndex = 0
-                if (i < numRecord - 1) {
-                    endIndex = Int(wordsAndIndex[i+1].0)
+                if i < numRecord - 1 {
+                    endIndex = wordsAndIndex[i+1].0
                 } else {
                     endIndex = decompress + offset
                 }
@@ -88,10 +95,10 @@ public final class MDictParser {
         }
         return dict
     }
-    
-    func getIndexAndWords(length: Int, blockSize: [(Int, Int)]) -> [(UInt64, String)] {
+
+    func getIndexAndWords(length: Int, blockSize: [(Int, Int)]) -> [(Int, String)] {
         var blockData = self.dictData.readSubData(length: length)
-        var r1: [(UInt64, String)] = []
+        var r1: [(Int, String)] = []
         for (size, _) in blockSize {
             var subBlockData = blockData.readSubData(length: size)
             subBlockData.decompress()
@@ -99,7 +106,7 @@ public final class MDictParser {
         }
         return r1
     }
-    
+
     func getDetailBlockSizeArray() -> [(Int, Int)] {
         let blockCount = self.dictData.readInt()
         let numRecord = self.dictData.readInt()

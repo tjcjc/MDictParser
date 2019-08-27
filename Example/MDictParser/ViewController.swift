@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var parser: MDictParser! = MDictParser(fileName: "oalecd8e")
+        var searchData: MDictSearchData = MDictParser(fileName: "LDOCE5++ V 2-15")!.getSearchData()
+        searchData.searchWords(index: 12100)
+        searchData.searchWords(index: 131000)
+        searchData.searchWords(index: 15000)
+        searchData.searchWords(index: 13310)
+        searchData.searchWords(index: 84001)
 //        print(UInt32(1).data())
 //        let header = parser.readh
 //        let header = parser.readPacked(checkIsLittleEndian: true)

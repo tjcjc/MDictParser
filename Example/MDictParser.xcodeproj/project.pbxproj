@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* MDictDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* MDictDataTest.swift */; };
 		827C78D49BFE5BD0E26E8F20 /* Pods_MDictParser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869339F404A748BAB312C2A8 /* Pods_MDictParser_Tests.framework */; };
+		F07D6AC5231524B400AD1F94 /* LDOCE5++ V 2-15.mdx in Resources */ = {isa = PBXBuildFile; fileRef = F07D6AC4231524B400AD1F94 /* LDOCE5++ V 2-15.mdx */; };
 		F0A51DE72313E29C00150694 /* oalecd8e.mdx in Resources */ = {isa = PBXBuildFile; fileRef = F0A51DE62313E29C00150694 /* oalecd8e.mdx */; };
 		F0A51DE82313E29C00150694 /* oalecd8e.mdx in Resources */ = {isa = PBXBuildFile; fileRef = F0A51DE62313E29C00150694 /* oalecd8e.mdx */; };
 		F0A9451323145D63006C2F40 /* MDictParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9451223145D63006C2F40 /* MDictParserTest.swift */; };
@@ -50,6 +51,7 @@
 		869339F404A748BAB312C2A8 /* Pods_MDictParser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDictParser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEB5D3B2239C0189D6D8E3D /* Pods_MDictParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDictParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA54C387EFCF1263C37A5B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F07D6AC4231524B400AD1F94 /* LDOCE5++ V 2-15.mdx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LDOCE5++ V 2-15.mdx"; sourceTree = "<group>"; };
 		F0A51DE62313E29C00150694 /* oalecd8e.mdx */ = {isa = PBXFileReference; lastKnownFileType = file; path = oalecd8e.mdx; sourceTree = "<group>"; };
 		F0A9451223145D63006C2F40 /* MDictParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDictParserTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		607FACD21AFB9204008FA782 /* Example for MDictParser */ = {
 			isa = PBXGroup;
 			children = (
+				F07D6AC4231524B400AD1F94 /* LDOCE5++ V 2-15.mdx */,
 				F0A51DE62313E29C00150694 /* oalecd8e.mdx */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -258,6 +261,7 @@
 				F0A51DE72313E29C00150694 /* oalecd8e.mdx in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				F07D6AC5231524B400AD1F94 /* LDOCE5++ V 2-15.mdx in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,12 +305,14 @@
 				"${BUILT_PRODUCTS_DIR}/JTUtils/JTUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/JT_CryptoSwift/JT_CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MDictParser/MDictParser.framework",
+				"${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JT_CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDictParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKV.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
