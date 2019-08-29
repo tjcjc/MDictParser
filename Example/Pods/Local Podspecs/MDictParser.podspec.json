@@ -20,9 +20,6 @@
   },
   "source_files": "MDictParser/Classes/**/*",
   "dependencies": {
-    "JT_CryptoSwift": [
-      "~> 1.0.1"
-    ],
     "JTUtils": [
       "~> 0.1.0"
     ],

@@ -6,14 +6,14 @@
 //
 
 struct MDictData {
-    var data: Data
+    var data: MDictSourceProtocol
     var index: Data.Index
     var version: MDictVersion = .v2
     var encoding: MDictEncoding = .utf8
     static let compressSignal: [UInt8] = [2, 0, 0, 0]
     var delimiter: [UInt8] = [0]
 
-    init(data: Data, version: MDictVersion, encoding: MDictEncoding) {
+    init(data: MDictSourceProtocol, version: MDictVersion, encoding: MDictEncoding) {
         self.data = data
         self.index = 0
         self.version = version
@@ -21,7 +21,7 @@ struct MDictData {
         self.delimiter = encoding.delimiter
     }
 
-    init(rawData: Data) {
+    init(rawData: MDictSourceProtocol) {
         self.data = rawData
         self.index = 0
         self.parseHeader()
@@ -84,7 +84,7 @@ struct MDictData {
     }
 
     mutating func readSubRawData(length: Int) -> Data {
-        let subData = self.data.subData(self.index, length: length)
+        let subData = self.data.subData(self.index, length: length).rawData()
         self.index += length
         return subData
     }
@@ -103,7 +103,7 @@ struct MDictData {
     }
 
     mutating func decompress(needDecrypt: Bool = false) {
-        var compressData = data
+        var compressData = data.rawData()
         if needDecrypt {
             compressData = self.mdxDecrypt(data: compressData)
             self.data = compressData
@@ -111,7 +111,7 @@ struct MDictData {
         }
         let adler32: UInt32 = compressData.readNum(index: 4)
         let subData = compressData.subData(8, length: compressData.count - 8)
-        if compressData.subData(length: 4).bytes == MDictData.compressSignal, let d = subData.unzip() {
+        if compressData.subData(length: 4).jtBytes == MDictData.compressSignal, let d = subData.unzip() {
             compressData = d
             self.data = compressData
             self.index = 0
@@ -144,7 +144,7 @@ struct MDictData {
         let count = data.count
         var keyEndIndex = count
         while i < count {
-            if data.subData(i, length: width).bytes == delimiter {
+            if data.subData(i, length: width).rawData().jtBytes == delimiter {
                 keyEndIndex = i
                 break
             }
@@ -173,7 +173,7 @@ struct MDictData {
     }
     
     func tailData() -> Data {
-        return self.data.subData(self.index, length: self.data.count - self.index)
+        return self.data.subData(self.index, length: self.data.count - self.index).rawData()
     }
 
     func mdxDecrypt(data: Data) -> Data {
@@ -182,12 +182,12 @@ struct MDictData {
         keyData.append(bytes)
         let key: Data = keyData.ripemd128()
         var rData = data.subData(length: 8)
-        rData.append(self.fastDecrypt(data: data.subData(8, length: data.count - 8), key: key.bytes))
+        rData.append(self.fastDecrypt(data: data.subData(8, length: data.count - 8), key: key.jtBytes))
         return rData
     }
 
     func fastDecrypt(data: Data, key: [UInt8]) -> Data {
-        var r = data.bytes
+        var r = data.jtBytes
         var previous: UInt8 = 0x36
         for i in 0 ..< r.count {
             var t =  (r[i] >> 4 | r[i] << 4) & 0xff

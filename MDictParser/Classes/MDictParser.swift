@@ -7,7 +7,6 @@
 
 import Foundation
 import JTUtils
-import JT_CryptoSwift
 
 public final class MDictParser {
     var dictData: MDictData
@@ -19,23 +18,22 @@ public final class MDictParser {
     var fileName: String = ""
 
     public init?(fileName: String) {
-        guard let path = Bundle.main.path(forResource: fileName, ofType: "mdx") else {
+        guard let handler = MDictFileHandler(fileName: fileName) else {
             return nil
         }
 
+        self.dictData = MDictData(rawData: handler)
         self.fileName = fileName
-        let rawData = try! Data(contentsOf: URL(fileURLWithPath: path))
-        self.dictData = MDictData(rawData: rawData)
-    }
-    
-    public func getSearchData() -> MDictSearchData {
         self.version = self.dictData.version
         self.encoding = self.dictData.encoding
+    }
+
+    public func getSearchData() -> MDictSearchData {
         self.parseKeys()
         let detailBlockSize = self.getDetailBlockSizeArray()
         return MDictSearchData(startIndex: self.dictData.index,
                                           fileName: fileName,
-                                          blockSize: detailBlockSize,
+                                          blockSize: detailBlockSize.map {[$0.0, $0.1]},
                                           indexAndWords: self.wordsAndIndex)
     }
 
@@ -60,7 +58,6 @@ public final class MDictParser {
         wordsAndIndex = self.getIndexAndWords(length: dataSize[3], blockSize: keyBlockSizeArray)
         self.numWords = wordsAndIndex.count
     }
-
 
     func parseDetailBlock(blockSize: [(Int, Int)], wordsAndIndex: [(Int, String)]) -> [(String, String)] {
         var i = 0

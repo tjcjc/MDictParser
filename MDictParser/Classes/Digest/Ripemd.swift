@@ -74,7 +74,7 @@ public final class Ripemd: DigestType {
             variant.compress(message: convertToUInt32Array(Array(chunk)), hash: &accumulatedHash)
         }
          
-        return (NSData(bytes: accumulatedHash, length: self.digestLength) as Data).bytes
+        return (NSData(bytes: accumulatedHash, length: self.digestLength) as Data).jtBytes
     }
     
     func convertToUInt32Array(_ chunk: Array<UInt8>) -> Array<UInt32> {

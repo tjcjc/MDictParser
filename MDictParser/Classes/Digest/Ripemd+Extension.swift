@@ -14,7 +14,7 @@
 
 infix operator  ~<< : MultiplicationPrecedence
 
-public func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
+internal func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
     return (lhs << UInt32(rhs)) | (lhs >> UInt32(32 - rhs));
 }
 
@@ -204,10 +204,10 @@ extension Digest {
 
 extension Data {
     public func ripemd128() -> Data {
-        return Data(Digest.ripemd128(bytes))
+        return Data(Digest.ripemd128(jtBytes))
     }
     
     public func ripemd160() -> Data {
-        return Data(Digest.ripemd160(bytes))
+        return Data(Digest.ripemd160(jtBytes))
     }
 }

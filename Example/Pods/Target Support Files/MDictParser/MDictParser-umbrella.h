@@ -14,4 +14,3 @@
 FOUNDATION_EXPORT double MDictParserVersionNumber;
 FOUNDATION_EXPORT const unsigned char MDictParserVersionString[];
 
-#import <MMKV/MMKV.h>

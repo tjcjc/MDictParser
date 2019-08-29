@@ -35,7 +35,7 @@
 		1FEC5A26093F8A0F2A3951F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3E8FCA8EE697A63E3368E98D /* Pods-MDictParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Tests/Pods-MDictParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADEDCF1A7264607C68EB83B /* Pods-MDictParser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Example.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Example/Pods-MDictParser_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4B3C7533D2185459E8C8DB1C /* MDictParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MDictParser.podspec; path = ../MDictParser.podspec; sourceTree = "<group>"; };
+		4B3C7533D2185459E8C8DB1C /* MDictParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MDictParser.podspec; path = ../MDictParser.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* MDictParser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDictParser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,14 +303,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MDictParser_Example/Pods-MDictParser_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JTUtils/JTUtils.framework",
-				"${BUILT_PRODUCTS_DIR}/JT_CryptoSwift/JT_CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MDictParser/MDictParser.framework",
 				"${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTUtils.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JT_CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDictParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMKV.framework",
 			);
