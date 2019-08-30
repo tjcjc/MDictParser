@@ -1,9 +1,7 @@
 # MDictParser
 
 [![CI Status](https://img.shields.io/travis/tjcjc/MDictParser.svg?style=flat)](https://travis-ci.org/tjcjc/MDictParser)
-[![Version](https://img.shields.io/cocoapods/v/MDictParser.svg?style=flat)](https://cocoapods.org/pods/MDictParser)
-[![License](https://img.shields.io/cocoapods/l/MDictParser.svg?style=flat)](https://cocoapods.org/pods/MDictParser)
-[![Platform](https://img.shields.io/cocoapods/p/MDictParser.svg?style=flat)](https://cocoapods.org/pods/MDictParser)
+[![codecov](https://codecov.io/gh/tjcjc/MDictParser/branch/master/graph/badge.svg)](https://codecov.io/gh/tjcjc/MDictParser)
 
 ## Example
 
