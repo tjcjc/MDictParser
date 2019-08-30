@@ -2,13 +2,17 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode7.3
+osx_image: xcode11
 language: objective-c
+xcode_workspace: Example/MDictParser.xcworkspace
+xcode_scheme: platform=iOS Simulator,name=iPhone Xʀ,OS=13.0
+
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MDictParser.xcworkspace -scheme MDictParser-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO | xcpretty
+- bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
 - pod lib lint
