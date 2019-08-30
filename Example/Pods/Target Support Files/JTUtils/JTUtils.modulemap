@@ -1,6 +1,0 @@
-framework module JTUtils {
-  umbrella header "JTUtils-umbrella.h"
-
-  export *
-  module * { export * }
-}

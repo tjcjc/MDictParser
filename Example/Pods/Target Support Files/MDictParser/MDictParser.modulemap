@@ -1,6 +1,0 @@
-framework module MDictParser {
-  umbrella header "MDictParser-umbrella.h"
-
-  export *
-  module * { export * }
-}
