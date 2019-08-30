@@ -8,10 +8,10 @@ xcode_workspace: Example/MDictParser.xcworkspace
 xcode_scheme: platform=iOS Simulator,name=iPhone Xʀ,OS=13.0
 
 # cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+podfile: Example/Podfile
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO | xcpretty
 - bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
