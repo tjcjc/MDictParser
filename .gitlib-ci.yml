@@ -3,11 +3,7 @@ before_script:
   - export LANGUAGE=en_US:en
   - export LC_ALL=en_US.UTF-8
 
-stages:
-  - test
-
 test_project:
-  - stage: test
   - script:
     - cp Example/Podfile .
     - pod install --project-directory=Example
