@@ -19,7 +19,7 @@ class TableOfContentsSpec: QuickSpec {
             
             it("read int") {
                 let headerCount: UInt32 = mdictData.readNum()
-                expect(headerCount) == UInt32(2524)
+                expect(headerCount) == UInt32(2523)
             }
             
 
