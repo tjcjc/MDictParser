@@ -3,8 +3,12 @@ before_script:
   - export LANGUAGE=en_US:en
   - export LC_ALL=en_US.UTF-8
 
-test_project:
-  - script:
+stages:
+  - test
+
+job:
+  stage: test
+  script:
     - cp Example/Podfile .
     - pod install --project-directory=Example
     - set -o pipefail && xcodebuild -workspace Example/MDictParser.xcworkspace -scheme MDictParser-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=13.0' -enableCodeCoverage YES test | xcpretty
