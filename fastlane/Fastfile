@@ -30,6 +30,6 @@ lane :test do
         output_types: "junit",
         output_files: "test.xml",
         output_directory: "test_output",
-        formatter: "xcpretty-json-formatter",
+        # formatter: "xcpretty-json-formatter",
     )
 end
