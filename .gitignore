@@ -36,3 +36,4 @@ Carthage/Build
 #
 Pods/
 test_output/
+.build/

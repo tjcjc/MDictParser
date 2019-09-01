@@ -26,9 +26,10 @@ lane :test do
 
         # Enable skip_build to skip debug builds for faster test performance
         # skip_build: true,
-        output_types: "junit",
         code_coverage: true,
+        output_types: "junit",
         output_files: "test.xml",
         output_directory: "test_output",
+        formatter: "xcpretty-json-formatter",
     )
 end

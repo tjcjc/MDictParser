@@ -30,6 +30,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F0A66D46231BC58D0082383A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1FEC5A26093F8A0F2A3951F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3E8FCA8EE697A63E3368E98D /* Pods-MDictParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Tests/Pods-MDictParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 		8FEB5D3B2239C0189D6D8E3D /* Pods_MDictParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDictParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA54C387EFCF1263C37A5B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F0A51DE62313E29C00150694 /* oalecd8e.mdx */ = {isa = PBXFileReference; lastKnownFileType = file; path = oalecd8e.mdx; sourceTree = "<group>"; };
+		F0A66D48231BC7820082383A /* Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = SOURCE_ROOT; };
 		F0A9451223145D63006C2F40 /* MDictParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDictParserTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +147,7 @@
 				607FACEB1AFB9204008FA782 /* MDictDataTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				F0A9451223145D63006C2F40 /* MDictParserTest.swift */,
+				F0A66D48231BC7820082383A /* Fake.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -179,6 +194,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				636AB2D2296FF10E676FDDCB /* [CP] Embed Pods Frameworks */,
 				2555D4FCC48F8EB98333DFE2 /* swiftlint */,
+				F0A66D46231BC58D0082383A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +231,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
