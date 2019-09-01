@@ -7,7 +7,7 @@ lane :lint do
     swiftlint(
         mode: :lint,                            # SwiftLint mode: :lint (default) or :autocorrect
         executable: "/usr/local/bin/swiftlint", # The SwiftLint binary path (optional). Important if you've installed it via CocoaPods
-        path: "Example",                  # Specify path to lint (optional)
+        # path: "Example",                  # Specify path to lint (optional)
         output_file: "test_output/swiftlint.result.xml",   # The path of the output file (optional)
         reporter: "junit",                       # The custom reporter to use (optional)
         config_file: ".swiftlint.yml",       # The path of the configuration file (optional)

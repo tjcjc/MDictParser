@@ -14,7 +14,9 @@ before_install:
 - pod install --project-directory=Example
 - bundle install
 - mkdir -p test_output
+- brew install danger/tap/danger-swift
 script:
+- danger-swift ci
 - bundle exec fastlane ci_test
 - bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
 - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git

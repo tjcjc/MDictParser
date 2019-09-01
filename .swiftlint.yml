@@ -13,11 +13,12 @@ opt_in_rules:
   - force_unwrapping
 
 included:
-  - ../MDictParser
+  - MDictParser/Classes
 
 excluded:
-  - ../MDictParser/Classes/Regex
-  - ../MDictParser/Classes/DataCompression
+  - MDictParser/Classes/Regex
+  - MDictParser/Classes/DataCompression
+  - MDictParser/Classes/Digest
 
 function_body_length:
   warning: 50
