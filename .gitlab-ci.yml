@@ -14,7 +14,7 @@ job:
     - cp Example/Podfile .
     - pod install --project-directory=Example
     - bundle exec fastlane ci_test
-    - bundle exec danger -d DangerfileGitlab
+    - bundle exec danger --dangerfile=DangerfileGitlab
     - bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
   artifacts:
     reports:
