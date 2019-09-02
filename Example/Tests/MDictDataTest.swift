@@ -76,7 +76,7 @@ class TableOfContentsSpec: QuickSpec {
                 }
 
                 it("will eventually pass") {
-                    var time = "passing"
+                    var time = "pasing"
 
                     DispatchQueue.main.async {
                         time = "done"
