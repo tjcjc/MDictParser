@@ -33,3 +33,14 @@ lane :test do
         # formatter: "xcpretty-json-formatter",
     )
 end
+
+## XCode 11 delete the report file
+# lane :coverage do
+#     xcov(
+#         scheme: 'MDictParser-Example',
+#         workspace: 'Example/MDictParser.xcworkspace',
+#         output_directory: "test_output"
+#         #    exclude_targets: 'Demo.app',
+#         # minimum_coverage_percentage: 0.,
+#     )
+# end

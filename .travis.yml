@@ -3,7 +3,7 @@
 # * https://github.com/supermarin/xcpretty#usage
 # * https://jasontaiworkspace.slack.com/apps/A0F81FP4N-travis-ci?next_id=0
 
-osx_image: xcode11
+osx_image: xcode10.3
 language: objective-c
 # xcode_workspace: Example/MDictParser.xcworkspace
 # xcode_scheme: platform=iOS Simulator,name=iPhone Xʀ,OS=13.0

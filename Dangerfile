@@ -19,3 +19,10 @@ junit.report
 swiftlint.config_file = '.swiftlint.yml'
 swiftlint.lint_all_files = true
 swiftlint.lint_files
+
+xcov.report(
+   scheme: 'MDictParser-Example',
+   workspace: 'Example/MDictParser.xcworkspace',
+#    exclude_targets: 'Demo.app',
+   minimum_coverage_percentage: 90
+)

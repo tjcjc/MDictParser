@@ -68,7 +68,7 @@ class TableOfContentsSpec: QuickSpec {
             context("these will pass") {
 
                 it("can do maths") {
-                    expect(23) == 24
+                    expect(24) == 24
                 }
 
                 it("can read") {
