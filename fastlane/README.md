@@ -30,6 +30,11 @@ fastlane lint
 fastlane test
 ```
 
+### coverage
+```
+fastlane coverage
+```
+
 
 ----
 
