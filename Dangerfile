@@ -24,5 +24,5 @@ xcov.report(
    scheme: 'MDictParser-Example',
    workspace: 'Example/MDictParser.xcworkspace',
 #    exclude_targets: 'Demo.app',
-   minimum_coverage_percentage: 90
+#    minimum_coverage_percentage: 90
 )
