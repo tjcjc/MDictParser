@@ -18,9 +18,9 @@ before_install:
 script:
 - bundle exec fastlane ci_test
 - bundle exec danger
-- pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 after_success:
 - bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
+- pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 notifications:
   slack: jasontaiworkspace:8am0Sc7MLwGKW6lRL1MQYxp8
   email: false
