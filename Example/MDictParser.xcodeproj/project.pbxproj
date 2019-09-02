@@ -30,6 +30,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F0A66D46231BC58D0082383A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1FEC5A26093F8A0F2A3951F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3E8FCA8EE697A63E3368E98D /* Pods-MDictParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDictParser_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MDictParser_Tests/Pods-MDictParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +192,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				636AB2D2296FF10E676FDDCB /* [CP] Embed Pods Frameworks */,
 				2555D4FCC48F8EB98333DFE2 /* swiftlint */,
+				F0A66D46231BC58D0082383A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +229,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
@@ -289,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --path \"${PROJECT_DIR}/..\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		636AB2D2296FF10E676FDDCB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

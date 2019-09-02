@@ -1,6 +1,7 @@
 # references:
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
+# * https://jasontaiworkspace.slack.com/apps/A0F81FP4N-travis-ci?next_id=0
 
 osx_image: xcode11
 language: objective-c
@@ -12,8 +13,12 @@ podfile: Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
+- bundle install
+- mkdir -p test_output
 script:
-- set -o pipefail && xcodebuild -workspace Example/MDictParser.xcworkspace -scheme MDictParser-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.3.1' -enableCodeCoverage YES test | xcpretty
+- bundle exec fastlane ci_test
+- bundle exec danger
+after_success:
 - bash <(curl -s https://codecov.io/bash) -t a9624e7b-9060-4d9b-ab62-c69317883dc7
 - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 notifications:
